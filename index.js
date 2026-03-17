@@ -62,5 +62,23 @@ let myFunction = (lang => {
 });
 arr.forEach(lang=>{
     app.prepend(myFunction(lang));
-})
+});
 
+
+
+//getComputedStyle method...
+let mess = document.getElementById('message');
+let style = getComputedStyle(mess);
+
+console.log('Color: ', style.color);
+console.log('background color: ', style.backgroundColor);
+
+//className method. it use to identefy the class name in innerHtml...
+let idName = document.querySelector('.message');
+console.log("Class name is : ", idName.className);
+
+//classList..
+let div = document.querySelector('#content');
+for (let cssClass of div.classList) {
+    console.log(cssClass);
+}
