@@ -1,37 +1,10 @@
-let parent = document.querySelector('#parent');
-let form = document.querySelector('#form');
 let button = document.querySelector('#btn');
+button.addEventListener('click', (e)=>{
+    let key = [];
+    if(e.shiftKey)key.push('Shift');
+    if(e.altKey)key.push('Alt');
+    if(e.ctrlKey)key.push('Ctrl');
 
-
-/// at first remove the comment...
-// button.addEventListener('click', listen);
-// form.addEventListener('click', listen);
-// parent.addEventListener('click', listen);
-
-//Js Bubbling...
-//Here atfirst come child element then parent element..
-// function listen (enent) {
-//     console.log(event.currentTarget);
-//}
-
-// function listen (event){
-//     console.log(this.tagName);
-// }
-
-//Js Capturing...
-//It just reverse the tag name. parent parent come first then child...
-
-// button.addEventListener('click', listen, {
-//     capture: true,
-// });
-// form.addEventListener('click', listen, {
-//     capture: true,
-// });
-// parent.addEventListener('click', listen, {
-//     capture: true,
-// });
-
-// function listen (){
-//     console.log(this.tagName);
-// }
-
+    let mess = document.querySelector('#message');
+    mess.innerHTML = `Keys are ${key.join('+')}`;
+});
