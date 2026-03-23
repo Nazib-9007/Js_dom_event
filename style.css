@@ -6,9 +6,6 @@ body{
     font-weight: 800;
 }
 
-h1{
-    text-align: center;
-}
 #btn{
     margin: 50% 40%;
     padding: 1.2rem;
@@ -24,4 +21,17 @@ h1{
 }
 #btn:hover{
     transform: translate(5px);
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+#bg{
+    margin: 0px auto;
+    background-color: #7f8fa6;
+    width: 500px;
+    height: 450px;
 }
