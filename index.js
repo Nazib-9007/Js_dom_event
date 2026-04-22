@@ -116,4 +116,32 @@ for(let i = 0; i<2; i++){
     table.appendChild(row);
 }
 document.body.appendChild(table);
+///Second Type problem..
+const table = document.createElement('table');
+table.style.borderCollapse = 'collapse';
+
+for (let i = 0; i < 2; i++) {
+    const row = document.createElement('tr');
+
+    for (let j = 0; j < 2; j++) {
+        const cell = row.insertCell(j);
+        cell.textContent = `Row ${j} Cell ${j}`;
+        cell.style.padding = '10px';
+        cell.style.border = '1px solid green';
+    }
+    table.appendChild(row);
+}
+
+const addNote = document.createElement('h2');
+addNote.insertAdjacentText('beforeend', 'This is a new note');
+
+const insertRow = table.insertRow(0);
+for (let k = 0; k < 2; k++) {
+    const newCell = insertRow.insertCell(k);
+    newCell.textContent = 'New Header note';
+    newCell.style.padding = '10px';
+    newCell.style.border = '1px solid green';
+}
+
+document.body.appendChild(table);
 
